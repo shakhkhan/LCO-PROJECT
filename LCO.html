@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LOC</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- font-awesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- STYLESHEET -->
+<link rel="stylesheet" href="animate.css">	
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- GOOGLE-FONT -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+ 			<div class="col-md-12">
+ 				<p class="col-md-3 animated rollIn">FRONT END CHALLENGE </p>
+ 			</div>
+       </nav>
+	</header>
+	<div class="container">
+			<div class="row">
+				<section id=sec-1>
+					<div class="question-1 text-center col-lg-12 col-md-12 col-sm-12">
+						<h2 class="animated slideInLeft">What is Palindrome number ? <i onclick="myFunction()" class="fa fa-angle-right"></i></h2>
+						<!-- <button onclick="myFunction()">Click me</button> -->
+					</div>
+					<div class="description-1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4> A palindrome string is a string that reads the same backward as forward and can be of odd or even length. A palindrome number is a number which is equal to its reverse. Our program works as follows: at first, we copy the entered string into a new string, and then we reverse and compare it with original string. If both of them have the same sequence of characters, i.e., they are identical then the entered string is a palindrome otherwise not. To perform copy, reverse and compare operations we use strcpy, strrev and strcmp functions of "string.h" respectively. </h4>
+					</div>
+					</section>
+			</div>
+		</div>
+				<div class="solution-row-1">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="solution-1 col-md-5">
+						<h2>Solution in C : -</h2>
+						<h3 id="hidden-answer">
+							int main() <br>
+							{ <br>
+						   char a[100], b[100];<br> 
+						   printf("Enter a string to check if it is a palindrome\n");<br>
+						   gets(a);<br>	 
+						   strcpy(b,a);<br>
+						   strrev(b);<br>	 
+						   if (strcmp(a,b) == 0)<br>
+						      printf("Entered string is a palindrome.\n");<br>
+						   else<br>
+						      printf("Entered string isn't a palindrome.\n");<br> 
+						   return 0;<br>
+							}<br>
+						</h3>		
+					</div>
+					<div class="solution-2 col-md-offset-2 col-md-5">
+						<h2>Solution in JAVA : -</h2>
+						<h3 class="">
+							class Palindrome<br>
+							{<br>
+   								public static void main(String args[])<br>
+   							{<br>
+      							String original, reverse = ""; // Objects of String class<br>
+      							Scanner in = new Scanner(System.in);<br>
+      							System.out.println("Enter a string to check if it is a<br>palindrome");<br>
+						      original = in.nextLine();<br>
+						      int length = original.length();<br>			 
+						      for ( int i = length - 1; i >= 0; i-- )<br>
+						         reverse = reverse + original.charAt(i);<br>			 
+						      if (original.equals(reverse))<br>
+						         System.out.println("Entered string is a palindrome.");<br>
+						      else<br>
+						         System.out.println("Entered string isn't a palindrome.");<br>
+						   }}	<br>
+						</h3>						
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+			<div class="row">
+				<section id=sec-1>
+					<div class="question-1 text-center col-lg-12 col-md-12 col-sm-12">
+						<h2 >What is Fibonicci series ? <i onclick="myFunction()" class="fa fa-angle-right"></i></h2>
+						<!-- <button onclick="myFunction()">Click me</button> -->
+					</div>
+					<div class="description-1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4>  In case of fibonacci series, next number is the sum of previous two numbers for example 0, 1, 1, 2, 3, 5, 8, 13, 21 etc. The first two numbers of fibonacci series are 0 and 1.
+						<ul>
+							There are two ways to write the fibonacci series program:
+						<li>
+							Fibonacci Series without recursion
+						</li>	
+							<li>
+						    Fibonacci Series using recursion 
+						   </li>
+						
+						</ul>
+						</h4>
+					</div>
+					</section>
+			</div>
+		</div>
+					<div class="solution-row-2">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="solution-1 col-md-5">
+						<h2>Solution in C : -</h2>
+						<h3 id="hidden-answer">
+							int main()<br>  
+								{   <br> 
+								 int n1=0,n2=1,n3,i,number;<br>    
+								 printf("Enter the number of elements:");<br>    
+								 scanf("%d",&number);<br>    
+								 printf("\n%d %d",n1,n2);//printing 0 and 1<br>   
+								 for(i=2;i<number;++i)//loop starts from 2 because 0 and 1 are already printed<br>   
+								 {<br>   
+								  n3=n1+n2;<br>    
+								  printf(" %d",n3);<br>    
+								  n1=n2;<br>    
+								  n2=n3;<br>    
+								 }<br>  
+								  return 0;<br>  
+								 }<br>    
+						</h3>		
+					</div>
+					<div class="solution-2 col-md-offset-2 col-md-5">
+						<h2>Solution in JAVA : -</h2>
+						<h3 class="">
+							class FibonacciExample1{<br>  
+							public static void main(String args[])<br>
+							{<br>  
+							 int n1=0,n2=1,n3,i,count=10;<br>    
+							 System.out.print(n1+" "+n2);//printing 0 and 1<br>		    
+							 for(i=2;i<count;++i)//loop starts from 2 because 0 and 1 are already printed<br>    
+							 {<br>
+							  n3=n1+n2;<br>    
+							  System.out.print(" "+n3);<br>    
+							  n1=n2;<br>    
+							  n2=n3;<br>    
+							 }<br>     
+							}}<br>  
+						</h3>						
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+			<div class="row">
+				<section id=sec-1>
+					<div class="question-1 text-center col-lg-12 col-md-12 col-sm-12">
+						<h2 >What is Faqctorial number ? <i onclick="myFunction()" class="fa fa-angle-right"></i></h2>
+						<!-- <button onclick="myFunction()">Click me</button> -->
+					</div>
+					<div class="description-1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4>   Factorial of n is the product of all positive descending integers. Factorial of n is denoted by n!.
+							The factorial is normally used in Combinations and Permutations (mathematics).
+
+						<ul>
+							There are many ways to write the factorial program in c language. Let's see the 2 ways to write the factorial program,anyway we will see how to solve it using loop.
+						<li>
+							Factorial Program using loop.
+						</li>	
+							<li>
+						    Factorial Program using recursion. 
+						   </li>
+						However, we will see the example of using loop.
+						</ul>
+						</h4>
+					</div>
+					</section>
+			</div>
+		</div>
+					<div class="solution-row-3">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="solution-1 col-md-5">
+						<h2>Solution in C : -</h2>
+						<h3 id="hidden-answer">
+							int main()<br>    
+							{<br>    
+							 int i,fact=1,number;<br>    
+							 printf("Enter a number: ");<br>    
+							  scanf("%d",&number);<br>    
+							    for(i=1;i<=number;i++){<br>    
+							      fact=fact*i;<br>    
+							  }<br>    
+							  printf("Factorial of %d is: %d",number,fact);<br>    
+							return 0;<br>  
+							}<br> 
+						</h3>		
+					</div>
+					<div class="solution-2 col-md-offset-2 col-md-5">
+						<h2>Solution in JAVA : -</h2>
+						<h3 class="">
+						class FactorialExample{<br>  
+							 public static void main(String args[]){<br>  
+							  int i,fact=1;<br>  
+							  int number=5;//It is the number to calculate factorial<br>
+							  for(i=1;i<=number;i++){<br>   
+							      fact=fact*i;<br>    
+							  }<br>    
+							  System.out.println("Factorial of "+number+" is:<br> "+fact);<br>    
+							 }}<br> 
+						</h3>						
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+			<div class="row">
+				<section id=sec-1>
+					<div class="question-1 text-center col-lg-12 col-md-12 col-sm-12">
+						<h2 >What is Bubble sort ? <i onclick="myFunction()" class="fa fa-angle-right"></i></h2>
+						<!-- <button onclick="myFunction()">Click me</button> -->
+					</div>
+					<div class="description-1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4>   C programming code for bubble sort to sort numbers or arrange them in ascending order. You can modify it to print numbers in descending order.You can also sort strings using Bubble sort, it is less efficient as its average and worst case complexity is high, there are many other fast sorting algorithms like quick-sort, heap-sort, etc. Sorting simplifies problem-solving in computer programming.
+						</h4>
+					</div>
+					</section>
+			</div>
+		</div>
+					<div class="solution-row-4">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="solution-1 col-md-5">
+						<h2>Solution in C : -</h2>
+						<h3 id="hidden-answer">
+						int main()<br>
+							{<br>
+							  int array[100], n, c, d, swap;<br>				 
+							  printf("Enter number of elements\n");<br>
+							  scanf("%d", &n);<br>
+							  printf("Enter %d integers\n", n);<br>
+							  for (c = 0; c < n; c++)<br>
+							    scanf("%d", &array[c]);<br>
+							  for (c = 0 ; c < n - 1; c++)<br>
+							  {<br>
+							    for (d = 0 ; d < n - c - 1; d++)<br>
+							    {<br>
+							      if (array[d] > array[d+1]) /* For decreasing order use < */<br>
+							      {<br>
+							        swap       = array[d];<br>
+							        array[d]   = array[d+1];<br>
+							        array[d+1] = swap;<br>
+							    }}}<br>
+							  printf("Sorted list in ascending order:\n");<br>		 
+							  for (c = 0; c < n; c++)<br>
+							     printf("%d\n", array[c]);<br>		 
+							  return 0;<br>
+							}<br>
+						</h3>		
+					</div>
+					<div class="solution-2 col-md-offset-2 col-md-5">
+						<h2>Solution in JAVA : -</h2>
+						<h3 class="">
+							class BubbleSort {<br>
+								  public static void main(String []args) {<br>
+								    int n, c, d, swap;<br>
+								    Scanner in = new Scanner(System.in);<br>
+								    System.out.println("Input number of integers to sort");<br>
+								    n = in.nextInt();<br>
+								    int array[] = new int[n];<br>
+								    System.out.println("Enter " + n + " integers");<br>
+								    for (c = 0; c < n; c++) <br>
+								      array[c] = in.nextInt();<br>
+								    for (c = 0; c < ( n - 1 ); c++)<br>
+								     { for (d = 0; d < n - c - 1; d++) {<br>
+								        if (array[d] > array[d+1]) /* For descending order use < */<br>
+								        {<br>
+								          swap       = array[d];<br>
+								          array[d]   = array[d+1];<br>
+								          array[d+1] = swap;<br>
+								        }}}<br>
+								    System.out.println("Sorted list of numbers");<br>
+								    for (c = 0; c < n; c++) <br>
+								      System.out.println(array[c]);<br>
+								  }}<br>
+						</h3>						
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+							<div class="container">
+			<div class="row">
+				<section id=sec-1>
+					<div class="question-1 text-center col-lg-12 col-md-12 col-sm-12">
+						<h2 >How to find 3rd largest number in an array ? <i onclick="myFunction()" class="fa fa-angle-right"></i></h2>
+						<!-- <button onclick="myFunction()">Click me</button> -->
+					</div>
+					<div class="description-1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4>   Simplest way to solve this question is to first iterate through the array and find first maximum. Store this first maximum as well as its index. Now traverse the whole array finding the second max with the changed condition. Finally traverse the array third time and find the third largest element.
+						</h4>
+					</div>
+					</section>
+			</div>
+		</div>
+					<div class="solution-row-5">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="solution-1 col-md-5">
+						<h2>Solution in C : -</h2>
+						<h3 id="hidden-answer">
+							void thirdLargest(int arr[], int arr_size){<br>
+							    /*There should be atleast three elements */<br>
+							    if (arr_size < 3)<br>
+							    {printf(" Invalid Input ");<br>
+							        return;}<br>
+							    // Initialize first,second and third Largest element
+							    int first = arr[0],second = INT_MIN, third = INT_MIN;<br>
+							    // Traverse array elements to find the third Largest<br>
+							    for (int i = 1; i < arr_size ; i ++) {<br>
+							        /* If current element is greater than first,
+							           then update first, second and third */<br>
+							        if (arr[i] > first)<br>
+							           { third  = second;<br>
+							            second = first;<br>
+							            first  = arr[i];}<br>
+							        /* If arr[i] is in between first and second */
+							        else if (arr[i] > second)<br>
+							           { third = second;<br>
+							            second = arr[i];}<br>
+							        /* If arr[i] is in between second and third */
+							        else if (arr[i] > third)<br>
+							            third = arr[i];}<br>
+							    printf("The third Largest element is %d\n", third);<br>
+							}<br>
+						</h3>		
+					</div>
+					<div class="solution-2 col-md-offset-2 col-md-5">
+						<h2>Solution in JAVA : -</h2>
+						<h3 class="">
+							public class ThirdLargestInArrayExample{<br>  
+								public static int getThirdLargest(int[] a, int total)<br>  {<br>
+								int temp;<br>  
+								for (int i = 0; i < total; i++)<br>   
+								        {  <br>
+								            for (int j = i + 1; j < total; j++)<br>   
+								            {  <br>
+								                if (a[i] > a[j])<br>   
+								                {  <br>
+								                    temp = a[i];<br>  
+								                    a[i] = a[j];  <br>
+								                    a[j] = temp;  <br>
+								                }  <br>
+								            }  <br>
+								        }  <br>
+								       return a[total-3];<br>  
+								}  <br>
+								public static void main(String args[]){<br>  
+								int a[]={1,2,5,6,3,2};  <br>
+								int b[]={44,66,99,77,33,22,55};<br>  
+								System.out.println("Third Largest: "+getThirdLargest(a,6));  <br>
+								System.out.println("Third Largest: "+getThirdLargest(b,7));  <br>
+								}<br>
+							}  <br>
+						</h3>						
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+	<footer>
+		<div class="row">
+			<p>&copy; 2018 shaQuib Ahmad Khan.</p><p> All Rights Reserved.This site is built with CSS, HTML5 & BOOTSTRAP only. Frameworks/Libraries, Images, fonts and design used in this project are either Open Source/Free or my personal property. <a href="">Terms</a>
+			<a href="">Conditions</a></p>
+		<div class="">
+			<a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+			<a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+			<a href="https://twitter.com" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+			<a href="https://github.com/" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+		</div>
+		</div>
+	</footer>
+</body>
+</html>
